@@ -1,0 +1,154 @@
+{
+  "markets": [
+    {
+      "key": "the_ot",
+      "name": "The OT",
+      "emoji": "🛍",
+      "description": "Бюджетная одежда",
+      "wechat_ids": [
+        {"id": "BYRING_ot"},
+        {"id": "obe1d24"},
+        {"id": "cabinet_75"},
+        {"id": "Soil4615"},
+        {"id": "jjang72006954"},
+        {"id": "ableandco"},
+        {"id": "sunday4g17"},
+        {"id": "aura_jeans"},
+        {"id": "minimal_OT1F11"},
+        {"id": "DWPCHOCO"},
+        {"id": "theot1H16MJ"},
+        {"id": "firstmoon4558"},
+        {"id": "rooming4666"},
+        {"id": "Miho1E-07"},
+        {"id": "PDZ_pasteldeer"},
+        {"id": "publicdenim"},
+        {"id": "bygo51184223"},
+        {"id": "THX_VERY"},
+        {"id": "happyday134"}
+      ]
+    },
+    {
+      "key": "apm_place",
+      "name": "APM Place",
+      "emoji": "💎",
+      "description": "Премиум",
+      "wechat_ids": [
+        {"id": "evasstreet", "note": "сумки"},
+        {"id": "taupe_studio"},
+        {"id": "grandmaison"},
+        {"id": "Three-another"}
+      ]
+    },
+    {
+      "key": "ddp",
+      "name": "DDP",
+      "emoji": "🏬",
+      "description": "Средний сегмент",
+      "wechat_ids": [
+        {"id": "triangle6270"},
+        {"id": "jroute214"},
+        {"id": "ddp14041"},
+        {"id": "wxid_8jcy2spt6nw812"},
+        {"id": "abridge298"},
+        {"id": "Somerzwoman"},
+        {"id": "collectedd"},
+        {"id": "veryberry53"}
+      ]
+    },
+    {
+      "key": "apm",
+      "name": "APM",
+      "emoji": "🏢",
+      "description": "Средний сегмент",
+      "wechat_ids": [
+        {"id": "chae0800"},
+        {"id": "romanticize_seoul"},
+        {"id": "basil_in_bottle"},
+        {"id": "ANDTHE261"},
+        {"id": "stainlessrok"},
+        {"id": "eum_seoul"}
+      ]
+    },
+    {
+      "key": "apm_luxe",
+      "name": "APM Luxe",
+      "emoji": "✨",
+      "description": "Люкс",
+      "wechat_ids": [
+        {"id": "alter4423"},
+        {"id": "Themorypark"},
+        {"id": "clode6090"}
+      ]
+    },
+    {
+      "key": "cosmic",
+      "name": "Cosmic",
+      "emoji": "🌟",
+      "description": "Корейская одежда",
+      "wechat_ids": [],
+      "contact": {
+        "label": "Космик",
+        "phone": "+7 908 915-61-11",
+        "whatsapp": "79089156111"
+      }
+    }
+  ],
+  "logistics": [
+    {
+      "id": "pavel",
+      "name": "Павел",
+      "emoji": "✈️",
+      "type_label": "ЕМС отправка",
+      "directions": ["Россия", "Казахстан"],
+      "phone": "+82 10 8688 7328",
+      "whatsapp": "821086887328",
+      "address": "서울특별시 중구 을지로42길 21, 1층 (광희동1가)"
+    },
+    {
+      "id": "vera",
+      "name": "Вера",
+      "emoji": "🚢",
+      "type_label": "Морская доставка",
+      "phone": "+82 10-7731-5893",
+      "whatsapp": "821077315893",
+      "warehouse_1": "인천광역시 연수구 함박로 78, 1층 101호",
+      "note": "2 склада — уточните актуальный напрямую перед отправкой"
+    },
+    {
+      "id": "max_cargo",
+      "name": "Max Cargo",
+      "emoji": "📦",
+      "type_label": "Карго от 3$/кг",
+      "phone": "+82 10 7104 8169",
+      "whatsapp": "821071048169",
+      "price": "от 3$ за 1 кг",
+      "delivery": "2–3 недели (Россия и СНГ)",
+      "note_positive": "Проверенные, закупаем у них косметику",
+      "note_warning": "Мелкие заказы не берут — только для бизнеса"
+    },
+    {
+      "id": "zenya",
+      "name": "ZenyaTsivileva",
+      "emoji": "👤",
+      "type_label": "Опытный байер",
+      "telegram": "ZenyaTsivileva",
+      "note": "Знает все рынки и магазины Кореи",
+      "note_warning": "Работает только с крупным бизнесом, по мелочи не берёт"
+    },
+    {
+      "id": "dasha",
+      "name": "Даша",
+      "emoji": "👤",
+      "type_label": "Байер",
+      "telegram": "aevamdasha"
+    },
+    {
+      "id": "tsyren",
+      "name": "Цырен",
+      "emoji": "💱",
+      "type_label": "Обмен валюты",
+      "phone": "+82 10-9546-1516",
+      "whatsapp": "821095461516"
+    }
+  ]
+}
