@@ -8,7 +8,7 @@ from config import BOT_TOKEN
 from database import init_db
 from handlers import (
     calculator, curator, faq, lessons, logistics,
-    price_list, progress, start, suppliers,
+    payment, price_list, progress, start, suppliers,
 )
 
 logging.basicConfig(
@@ -33,6 +33,7 @@ async def main() -> None:
     dp.include_router(faq.router)
     dp.include_router(curator.router)
     dp.include_router(progress.router)
+    dp.include_router(payment.router)
 
     await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot)

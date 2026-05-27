@@ -13,7 +13,8 @@ def main_menu_kb() -> ReplyKeyboardMarkup:
     b.button(text="❓ FAQ / Памятки")
     b.button(text="📞 Связаться с куратором")
     b.button(text="⚙️ Мой прогресс")
-    b.adjust(2, 2, 2, 1)
+    b.button(text="💳 Оплата")
+    b.adjust(2, 2, 2, 2)
     return b.as_markup(resize_keyboard=True)
 
 
@@ -78,4 +79,26 @@ def back_faq_kb() -> InlineKeyboardMarkup:
 def back_main_kb() -> InlineKeyboardMarkup:
     b = InlineKeyboardBuilder()
     b.button(text="⬅️ В главное меню", callback_data="back:main")
+    return b.as_markup()
+
+
+def admin_payment_kb(payment_id: int, user_id: int) -> InlineKeyboardMarkup:
+    """Inline keyboard for admin: approve or reject a payment."""
+    b = InlineKeyboardBuilder()
+    b.button(
+        text="✅ Подтвердить",
+        callback_data=f"pay_approve:{payment_id}:{user_id}",
+    )
+    b.button(
+        text="❌ Отклонить",
+        callback_data=f"pay_reject:{payment_id}:{user_id}",
+    )
+    b.adjust(2)
+    return b.as_markup()
+
+
+def cancel_payment_kb() -> InlineKeyboardMarkup:
+    """Cancel button shown during payment flow."""
+    b = InlineKeyboardBuilder()
+    b.button(text="❌ Отменить", callback_data="pay_cancel")
     return b.as_markup()
