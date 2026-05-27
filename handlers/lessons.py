@@ -9,7 +9,8 @@ from aiogram.exceptions import TelegramBadRequest
 from aiogram.fsm.context import FSMContext
 from aiogram.types import CallbackQuery, Message
 
-from database import get_completed_lessons, mark_lesson_complete
+from config import ADMIN_ID
+from database import get_completed_lessons, is_payment_approved, mark_lesson_complete
 from keyboards.kb import lesson_kb, lessons_list_kb
 
 router = Router()
@@ -67,7 +68,20 @@ def _render_short(lesson: dict) -> str:
 @router.message(F.text == "🎓 Уроки")
 async def show_lessons(message: Message, state: FSMContext) -> None:
     await state.clear()
-    completed = await get_completed_lessons(message.from_user.id)
+    uid = message.from_user.id
+
+    # Admin always has access; others must have approved payment
+    if uid != ADMIN_ID and not await is_payment_approved(uid):
+        await message.answer(
+            "🔒 <b>Доступ закрыт</b>\n\n"
+            "Уроки доступны только после оплаты.\n\n"
+            "Нажмите «💳 Оплата», оплатите и загрузите чек — "
+            "после подтверждения администратором доступ откроется автоматически.",
+            parse_mode="HTML",
+        )
+        return
+
+    completed = await get_completed_lessons(uid)
     await message.answer(
         "🎓 <b>Уроки по работе с площадками</b>\n\nВыбери урок:",
         parse_mode="HTML",
